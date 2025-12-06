@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MealPlanner – Healthy Recipe Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>MealPlanner</h1>
+    <p>Turn your ingredients into healthy meals.</p>
+  </header>
+
+  <main class="main">
+    <section class="card">
+      <h2>Search Recipes</h2>
+      <form id="search-form" class="form">
+        <label>
+          Ingredients (comma separated)
+          <input
+            type="text"
+            id="ingredients-input"
+            placeholder="e.g. chicken, tomato, onion"
+            required
+          />
+        </label>
+
+        <label>
+          Dietary goal (optional)
+          <select id="diet-select">
+            <option value="">Any</option>
+            <option value="high-protein">High protein</option>
+            <option value="low-calorie">Low calorie</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+          </select>
+        </label>
+
+        <button type="submit" class="btn">Search</button>
+      </form>
+
+      <div id="search-status" class="status"></div>
+      <div id="results" class="grid"></div>
+    </section>
+
+    <section class="card">
+      <h2>My Healthy List</h2>
+      <div id="favourites-status" class="status"></div>
+      <div id="favourites" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>MealPlanner · Healthy Recipe Finder</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
