@@ -1,9 +1,9 @@
 // script.js
 
-// Use local backend when developing locally, otherwise use deployed backend
+// If running locally, use local backend. Otherwise use relative paths so Vercel front+api work on same domain.
 const API_BASE_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
   ? 'http://localhost:3000'
-  : 'https://mealplanner-backend.onrender.com';
+  : '';
 
 
 const searchForm = document.getElementById("search-form");
